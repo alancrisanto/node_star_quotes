@@ -1,0 +1,138 @@
+body {
+  background: #141E30;
+  background: -webkit-linear-gradient(to bottom, #243B55, #141E30);
+  background: linear-gradient(to bottom, #243B55, #141E30);
+  /* background: #808080;
+  background: -webkit-linear-gradient(to bottom, #3fada8, #808080);
+  background: linear-gradient(to bottom, #3fada8, #808080); */
+
+  padding: 2rem;
+}
+
+h1 {
+  text-align: center;
+  font: 700 4em/1 "Oswald", sans-serif;
+  letter-spacing: 0;
+  padding: 1rem;
+  display: block;
+  margin: 0 auto 2rem auto;
+  text-shadow: 0 0 80px rgba(255, 255, 255, .5);
+  background: url("./image.jpg") repeat-y;
+  /* background: url(https://i.ibb.co/RDTnNrT/animated-text-fill.png) repeat-y; */
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-animation: aitf 80s linear infinite;
+  -webkit-transform: translate3d(0, 0, 0);
+  -webkit-backface-visibility: hidden;
+}
+
+/* Animate Background Image */
+
+@-webkit-keyframes aitf {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  100% {
+    background-position: 100% 50%;
+  }
+}
+
+.main-container {
+  display: grid;
+  grid-template-columns: 25% repeat(2, 1fr);
+  gap: 1rem;
+  place-items: center;
+}
+
+.container-card,
+.quotes,
+#message {
+  /* From https://css.glass */
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  padding: 2rem;
+  height: 200px;
+  border: 1px solid #ccc;
+  border-radius: 1rem;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+form input {
+  background: transparent;
+  width: 200px;
+  padding: 1em;
+  margin-bottom: 2em;
+  border: none;
+  border-left: 1px solid rgba(255, 255, 255, 0.3);
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 5000px;
+  backdrop-filter: blur(5px);
+  box-shadow: 4px 4px 60px rgba(0, 0, 0, 0.2);
+  color: #272424;
+  font-family: Montserrat, sans-serif;
+  font-weight: 500;
+  transition: all 0.2s ease-in-out;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+form input:hover {
+  background: rgba(216, 215, 215, 0.1);
+  box-shadow: 4px 4px 60px 8px rgba(0, 0, 0, 0.2);
+}
+
+form input::placeholder {
+  color: rgb(53, 49, 49);
+}
+
+form input[type="name"]:focus,
+form input[type="quote"]:focus {
+  background: rgba(180, 41, 41, 0.1);
+  box-shadow: 4px 4px 60px 8px rgba(0, 0, 0, 0.2);
+}
+
+button {
+  padding: 0.5rem 0.5rem;
+  border: 0;
+  background-color: #9f01ea;
+  color: white;
+  border-radius: 10px;
+}
+
+button:hover {
+  background-color: #3fada8;
+  color: #6d089c;
+}
+
+.hide {
+  display: none;
+}
+
+#message {
+  height: 10px;
+  margin: 2rem auto;
+}
+
+h2 {
+  color: #61ece5;
+}
+
+.quotes {
+  height: 100%;
+}
+
+li,
+p {
+  color: rgb(54, 171, 243);
+  font-size: 1.2rem;
+  padding: 0.5rem 0 0.5rem 0;
+}
